@@ -10,3 +10,4 @@ vpc_security_group_ids = [ aws_security_group_vpc-ssh_id ]
      Name = var.my_tag
    }
 }
+
