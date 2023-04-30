@@ -1,10 +1,12 @@
-sudo yum update -y
-sudo yum install httpd
-sudo systemctl enable httpd
-sudo service httpd start
-sudo echo '<h1>HELLO AND WELCOME TODAY'S CLASS IS ON TERRAFORM</h1>' | sudo tee /var/www/html/index.html
-sudo mkdir /var/www/html/app1
-sudo echo '<!DOCTYPE html> <html> <body style="background-colour:rgb(250,210,210);"> <h1>HELLO AND WELCOME TODAY'S CLASS IS ON TERRAFORM</h1> <p>Terraform Demo</p> <p>Application Version: V1</p> </body></html>' | sudo tee /var/www/html/app1/index.html
-sudo curl http://   /latest/dynamic/instance-identity/document -o /var/www/html/app1/metadata.html
+sudo apt-get install -y apt-transport-https
+sudo apt-get install -y software-properties-common wget
+sudo wget -q -O /usr/share/keyrings/grafana.key https://apt.grafana.com/gpg.key
+echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com beta main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+# Update the list of available packages
+sudo apt-get update
+
+# Install the latest OSS release:
+sudo apt-get install grafana
 
 
