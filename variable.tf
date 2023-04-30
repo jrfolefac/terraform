@@ -9,7 +9,7 @@ type = string
 }
 
 variable "my_instance" {
-default = "t2.micro"
+default = "t2.medium"
 description = "EC2 Instance Type"
 type = string
 }
