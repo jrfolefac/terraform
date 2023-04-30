@@ -9,6 +9,6 @@ terraform {
 } 
 
 provider "aws" {
-   profile = "default"   $HOME/.aws/credentials
+   profile = "default"  
    region = "var.aws_region"
 }
