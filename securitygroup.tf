@@ -1,3 +1,4 @@
+/*
 resource "aws_security_group" "vpc-ssh" {
   name        = "vpc-ssh"
   description = "dev ssh"
@@ -61,3 +62,4 @@ resource "aws_security_group" "vpc-web" {
     Name = "vpc-web"
   }
 }
+*/
