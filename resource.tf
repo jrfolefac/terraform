@@ -7,4 +7,5 @@ resource "aws_instance" "class25" {
 
    tags = {
      Name = var.my_tag
+   }
 }
