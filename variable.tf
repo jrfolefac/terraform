@@ -23,3 +23,13 @@ variable "my_key" {
 default = "juicy"
 type = string
 }
+
+variable "ingressrules"{
+     type = list(numbers)
+     default = [80,443,8080]
+    }
+   
+      variable "egressrules"{
+     type = list(numbers)
+     default = [80,443,8080,3606,53]
+    }
