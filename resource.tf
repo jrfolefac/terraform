@@ -4,6 +4,7 @@ resource "aws_instance" "class25" {
   instance_type = var.my_instance
  #user_data = file("${path.module}/app1-intstall.sh" 
   key_name =  "juicy"
+  count = 2
 
 
    tags = {
