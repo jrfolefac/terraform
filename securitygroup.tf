@@ -2,7 +2,7 @@ resource "aws_security_group" "webtraffic" {
    name  = "Allow HTTPS"
     
 
-  dynamic "ingess" {
+  dynamic "ingress" {
       iterator = port
       for_each = var.ingressrules
       content {
