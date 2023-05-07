@@ -26,10 +26,10 @@ type = string
 
 variable "ingressrules"{
      type = list(number)
-     default = [80,8080]
+     default = [80,8080,443]
     }
    
       variable "egressrules"{
      type = list(number)
-     default = [80,8080]
+     default = [80,8080,53,443,3606]
     }
