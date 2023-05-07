@@ -11,7 +11,10 @@ type = string
 variable "my_instance" {
 default = "t2.medium"
 description = "EC2 Instance Type"
-type = string
+type = map(string)
+   "dev" = "t2.micro"
+   "qa"  = "t2.small"
+   "prod" = "t3.large"
 }
 
 variable "my_tag" {
